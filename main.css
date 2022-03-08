@@ -1,0 +1,37 @@
+
+* {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+}
+
+html {
+          font-family: 'lato', sans-serif;
+          font-size: 10px;
+          color: blue;
+}
+
+body {
+          margin: 3rem;
+          background-color: black;
+}
+
+header .hero {
+          max-width: 100%;
+          max-height: 200px;
+          background-color: brown;
+          padding: 50px;
+          color: yellow;
+}
+header img {
+          max-height: 500px;
+          max-width: 350px;
+}
+
+/* nav { */
+
+/* } */
+
+/* section { */
+          
+/* } */
