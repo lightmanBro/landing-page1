@@ -23,15 +23,17 @@ body {
           position: sticky;
           text-align: center;
 }
-
+/* .static-hero-box ul {
+          display: flex;
+          flex-wrap: wrap;
+} */
 .static-hero-box li {
           display: inline-block;
           list-style-type: none;
+          height: 50px;
+          padding: 20px;
+          /* border: 2px solid green; */
 }
-
-/* .static-hero-box li:last-child {
-          color: black;
-} */
 
 .static-hero-box li a {
           text-decoration: none;
@@ -40,26 +42,25 @@ body {
           margin: 70px;
           font-size: 2rem;
           padding: 10px;
-          width: 50px;
           letter-spacing: 5px;
           font-weight: 600;
-          /* animation: ease-in; */
-          transition: width 0.8s ease-in;
+          transition: all .5s;
           
 }
+
 .static-hero-box li a:hover {
           background-color: brown;
           color:white;
-          transition:1s;
-          width: 65px;
-          
+          /* transform: skewY(3deg) skewX(15deg) scale(1.1); */
+          height: 50px;
+          /* padding: 20px; */
 }
+
 header {
           width: 100%;
           height: 250px;
           background-color: brown;
           position: relative;
-          color: yellow;
           display: flex;
           flex-wrap: wrap;
           align-items: center;
