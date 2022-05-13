@@ -14,34 +14,37 @@ html {
 body {
           /* background-color: black; */
           padding: 20px;
+          align-content: center;
 }
 
 .static-hero-box {
           width: 100%;
           height: 50px;
-          margin-top: 0;
-          position: sticky;
-          text-align: center;
+          margin: auto;
+          
 }
-/* .static-hero-box ul {
+.static-hero-box ul {
           display: flex;
           flex-wrap: wrap;
-} */
+}
 .static-hero-box li {
           display: inline-block;
           list-style-type: none;
           height: 50px;
-          padding: 20px;
+          padding: 10px;
+          margin: auto;
+          /* text-align: center; */
           /* border: 2px solid green; */
 }
 
 .static-hero-box li a {
           text-decoration: none;
+          display: inline-block;
           text-transform: uppercase;
           color: #777;
-          margin: 70px;
+          margin: auto;
           font-size: 2rem;
-          padding: 10px;
+          /* padding: 10px; */
           letter-spacing: 5px;
           font-weight: 600;
           transition: all .5s;
@@ -51,20 +54,23 @@ body {
 .static-hero-box li a:hover {
           background-color: brown;
           color:white;
-          /* transform: skewY(3deg) skewX(15deg) scale(1.1); */
-          height: 50px;
-          /* padding: 20px; */
+          display: block;
+          transform: translateY(-5px) skewY(-3deg) skewX(-15deg) scale(1.1);
+          margin-bottom: 5px;
+          padding: 20px;
+          z-index: 1;
 }
 
 header {
           width: 100%;
-          height: 250px;
+          max-height: 250px;
           background-color: brown;
           position: relative;
           display: flex;
           flex-wrap: wrap;
           align-items: center;
           justify-content: space-around;
+          z-index: 0;
 }
 
 
@@ -73,13 +79,15 @@ header {
           text-transform: uppercase;
           letter-spacing: 5px;
           word-spacing: 20px;
-          font-size: 4rem;
+          font-size: clamp(2rem, 2vw, 3rem);
           font-weight: 500;
           text-align: center;
           margin:auto 50px;
           align-self: center;
           /* z-index: 1; */
 }
+
+
 section {
           background-image: url(img/jesuschristredrobe_large.jpg);
           background-position: top;
@@ -87,7 +95,7 @@ section {
           background-repeat: no-repeat;
           background-attachment:fixed;
           width: 100%;
-          height: 50rem;
+          height: 80vh;
           position: relative;
 }
 
@@ -95,10 +103,10 @@ section {
           /* border: 2px solid black; */
           backdrop-filter: blur(6px);
           padding: 10px;
-          width: 350px;
+          max-width: 350px;
           position: absolute;
           right: 100px;
-          top: 20%;
+          /* top: 20%; */
 }
 
 .section-hero-text-big {
@@ -107,8 +115,13 @@ section {
           font-size: 6rem;
 }
 
+.section-hero-text-big:hover {
+          transform: translateY(-5px) skewY(-3deg) skewX(-15deg) scale(1.1);
+          transition: all .5s;
+}
+
 .section-hero-text p {
-          font-size: 2rem;
+          font-size: clamp(2rem, 2vw, 3rem);
           color: #fff;
           text-rendering: optimizeLegibility;
           
@@ -122,16 +135,13 @@ main {
           margin: auto;
 }
 .main-text {
-          column-count: 3;
+         /* display: inline-block; */
+         column-count: 3;
           column-span: all;
-          column-gap: 25px;
-          column-rule-color: #777;
-          font-size: 2rem;
-          color: brown;
-          word-spacing: 10px;
-          letter-spacing: 2px;
-          text-indent: 10px;
-          text-align: justify;
+          column-gap: 30px;
+         word-spacing: 10px;
+         word-break: break-all;
+         color: brown;
 }
 
 footer {
@@ -142,4 +152,24 @@ footer {
           background-color:brown;
           text-align: justify;
 
+}
+
+@media screen and  (min-width: 400px) {
+                    main{
+                              /* display: block; */
+                              padding: 40px;
+
+                    }
+}
+
+@media screen and  (min-width: 370px) and (max-width: 10000px) {
+          .main-text {
+                    
+                    font-size: 2rem;
+                    color: brown;
+                    word-spacing: 10px;
+                    letter-spacing: 2px;
+                    text-indent: 10px;
+                    text-align: justify;
+          }
 }
