@@ -20,28 +20,24 @@ body {
 .static-hero-box {
           width: 100%;
           height: 30px;
-          margin: 50px auto;
+          margin: 30px auto;
+          text-align: center;
           
-}
-.static-hero-box ul {
 }
 
 .static-hero-box li {
           display: inline-block;
           list-style-type: none;
           height: 50px;
-          padding: 10px;
-          margin: auto;
+         margin-left: 50px;
 }
 
 .static-hero-box li a {
           text-decoration: none;
-          display: inline-block;
+          display: block;
           text-transform: uppercase;
           color: #777;
-          margin: auto;
           font-size: 2rem;
-          /* padding: 10px; */
           letter-spacing: 5px;
           font-weight: 600;
           transition: all .5s;
@@ -51,20 +47,16 @@ body {
 .static-hero-box li a:hover {
           background-color: brown;
           color:white;
-          display: block;
-          transform: translateY(-5px) skewY(-3deg) skewX(-15deg) scale(1.1);
-          margin-bottom: 5px;
-          padding: 20px;
-          z-index: 1;
+          transform: translateY(-5px) skewY(-3deg) skewX(-15deg) scale(1.3);
+          z-index: 100;
+          /* border: 2px solid #777; */
 }
 
 header {
           width: 100%;
-          max-height: 250px;
+          height: 100px;
           background-color: brown;
           position: relative;
-          display: flex;
-          flex-wrap: wrap;
           align-items: center;
           justify-content: space-around;
           z-index: 0;
@@ -79,31 +71,25 @@ header {
           font-size: clamp(2rem, 2vw, 3rem);
           font-weight: 500;
           text-align: center;
-          margin:auto 50px;
-          align-self: center;
-          /* z-index: 1; */
+          cursor: pointer;
 }
 
 
 section {
           background-image: url(img/jesuschristredrobe_large.jpg);
-          background-position: top;
           background-size:cover;
           background-repeat: no-repeat;
           background-attachment:fixed;
           width: 100%;
           height: 80vh;
-          position: relative;
 }
 
 .section-hero {
-          /* border: 2px solid black; */
           backdrop-filter: blur(6px);
-          padding: 10px;
           max-width: 350px;
           position: absolute;
           right: 100px;
-          /* top: 20%; */
+          cursor: pointer;
 }
 
 .section-hero-text-big {
@@ -126,20 +112,20 @@ section {
 
 main {
           max-width: 100%;
-          /* height: 70vh; */
           padding: 100px;
           align-items: center;
           margin: auto;
 }
 .main-text {
-         /* display: inline-block; */
          column-count: 3;
           column-span: all;
           column-gap: 30px;
+          font-size: 2rem;
          word-spacing: 10px;
          word-break: break-all;
          color: brown;
 }
+
 
 footer {
           width: 100%;
@@ -151,22 +137,24 @@ footer {
 
 }
 
-@media screen and  (min-width: 400px) {
-                    main{
-                              /* display: block; */
-                              padding: 40px;
-
+@media (min-width: 400px) {
+                    main {
+                              display: block;
+                              padding: 20px;
                     }
 }
 
-@media screen and  (min-width: 370px) and (max-width: 10000px) {
+@media (min-width: 500px) and (max-width: 500px) {
           .main-text {
-                    
-                    font-size: 2rem;
-                    color: brown;
-                    word-spacing: 10px;
-                    letter-spacing: 2px;
-                    text-indent: 10px;
-                    text-align: justify;
+          column-count: 1;
+          column-gap: 20px;
+          }
+}
+
+@media (min-width: 370px) and (max-width: 500px) {
+          .static-hero-box li {
+                    list-style-type: none;
+                    margin-top: auto;
+                   margin-left: 20px;
           }
 }
