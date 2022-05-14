@@ -62,6 +62,32 @@ header {
           z-index: 0;
 }
 
+.menu {
+          height: 50px;
+          width: 50px;
+          background-color: white;
+          border: 3px solid #777;
+          border-radius: 50%;
+          position: fixed;
+          z-index: 100;
+          margin: -50px 20px;
+}
+
+.menu a {
+          pointer-events: visible;
+}
+.menu-content {
+          display: none;
+}
+.menu-content:active{
+          display: inline-block;
+}
+
+.menu-link-text {
+          position: absolute;
+          transform: translate(-50%, -20%);
+          font-size: 40px;
+}
 
 .header-hero-text {
           color: #fff;
