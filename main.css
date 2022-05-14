@@ -72,9 +72,33 @@ header {
           z-index: 100;
           margin: -50px 20px;
 }
+.menu:active {
+          width: 100%;
+          height: 80vh;
+          margin: auto;
+          border-radius: 5px;
+          backdrop-filter: 10px;
+          background-color: rgba(119, 119, 119, 0.281);
+          background-origin: border-box;
+          transition: all 0.5s;
+          /* transform: skewX(10deg); */
+          border: none;
+}
 
+.menu:hover {
+          background-color: brown;
+          color: white;
+}
 .menu a {
-          pointer-events: visible;
+          text-decoration: none;
+          text-transform: uppercase;
+}
+
+.menu a:active {
+          opacity: 0;
+}
+.menu a:hover{
+          color: white;
 }
 .menu-content {
           display: none;
@@ -85,7 +109,7 @@ header {
 
 .menu-link-text {
           position: absolute;
-          transform: translate(-50%, -20%);
+          transform: translate(-50%, -5%);
           font-size: 40px;
 }
 
